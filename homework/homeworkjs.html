@@ -33,30 +33,31 @@
     </style>
 
     <script>
-              function order() {
-        let name = $('#order_name').val();
-        let count = $('#order_count').val();
-        let address = $('#order_address').val();
-        let phone = $('#order_phone').val();
+        function order() {
+            let name = $('#order_name').val();
+            let count = $('#order_count').val();
+            let address = $('#order_address').val();
+            let phone = $('#order_phone').val();
 
-        if (name == ''){
-          alert('이름을 입력해주세요')
-          $('#order_name').focus()
-          return
-        } else if (count == ''){
-          alert('수량을 입력해주세요')
-          $('#order_count').focus()
-          return
-        } else if (address == ''){
-          alert('주소를 입력해주세요')
-          $('#order_address').focus()
-          return
-        } else if (phone == ''){
-          alert('휴대폰번호를 입력해주세요')
-          $('#order_phone').focus()
-          return
+            if (name == '') {
+                alert('이름을 입력해주세요')
+                $('#order_name').focus()
+                return
+            } else if (count == '') {
+                alert('수량을 입력해주세요')
+                $('#order_count').focus()
+                return
+            } else if (address == '') {
+                alert('주소를 입력해주세요')
+                $('#order_address').focus()
+                return
+            } else if (phone == '') {
+                alert('휴대폰번호를 입력해주세요')
+                $('#order_phone').focus()
+                return
 
-
+            }
+        }
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -72,53 +73,53 @@
         <h1>털장갑을 팝니다</h1>
         <p>가격: 11,000원/pair</p>
         <p>유니온잭 장갑. 추운 날씨에 예쁜 장갑으로 손도 마음도 따듯하게~</p>
-        
-        
-        
-        
+
+
+
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="order_name">주문자 이름</span>
-              
+                <span class="input-group-text">주문자 이름</span>
+
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" aria-label="Default" id="order_name" aria-describedby="inputGroup-sizing-default">
         </div>
-        
-        
-        
+
+
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <label class="input-group-text" for="order_count">수량</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01">
+            <select class="custom-select" id="order_count">
                 <option selected>--수량을 선택하세요--</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
         </div>
-        
-        
-        
-        
+
+
+
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="order_address">주소</span>
+                <span class="input-group-text">주소</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" aria-label="Default" id="order_address" aria-describedby="inputGroup-sizing-default">
         </div>
-        
-        
-        
+
+
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="order_phone">전화번호</span>
+                <span class="input-group-text">전화번호</span>
             </div>
-            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input type="text" class="form-control" aria-label="Default" id="order_phone" aria-describedby="inputGroup-sizing-default">
         </div>
-        
-        
-        
+
+
+
         <button id="btn-posting-box" onclick="order()" type="button" class="btn btn-primary">주문하기</button>
 
     </div>
